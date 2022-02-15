@@ -16,11 +16,10 @@ function Home(props){
             setClasses(favoriteClasses.concat(value));
             setValue('');
         }
-        console.log(favoriteClasses);
     }
 
     return (
-        <div>
+        <div className='forms'>
             <h1>Tanush's Favorite Classes</h1>
             <form onSubmit={handleSubmit}>
                 <label>Add Favorite Class</label>

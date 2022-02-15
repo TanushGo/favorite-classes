@@ -2,7 +2,7 @@
   "name": "classes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://https://tanushgo.github.io//favorite-classes",
+  "homepage": "https://tanushgo.github.io//favorite-classes",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
