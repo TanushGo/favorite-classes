@@ -1,4 +1,5 @@
 import "./class.css";
+import React from "react";
 
 
 function Class(props) {
