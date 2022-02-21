@@ -1,8 +1,10 @@
-import React,{useState} from 'react';
+import React, {useState} from 'react';
 import Class from "./class";
+import ClassGraphQL from './ClassGraphQL';
 import "./Home.css";
 
-function Home(props){
+function Home(props) {
+
     const [value, setValue] = useState('');
     const [favoriteClasses, setClasses] = useState([]);
 
@@ -16,10 +18,12 @@ function Home(props){
             setClasses(favoriteClasses.concat(value));
             setValue('');
         }
+        console.log(favoriteClasses);
     }
 
+
     return (
-        <div className='forms'>
+        <div>
             <h1>Tanush's Favorite Classes</h1>
             <form onSubmit={handleSubmit}>
                 <label>Add Favorite Class</label>
@@ -31,9 +35,13 @@ function Home(props){
                     <Class name={favClass} key={favClass}></Class>
                 )}
             </div>
+            <div className="my-classes">
+                {favoriteClasses.map((favClass) => 
+                    <ClassGraphQL name={favClass} key={favClass}></ClassGraphQL>
+                )}
+            </div>
         </div>
     )
 }
-
 
 export default Home;
